@@ -1,3 +1,41 @@
 /* Location / directions section styles.
-   Filled by the ticket "Implement the location section with map link".
-   Placeholder file for the skeleton ticket. */
+   Layout and spacing follow DESIGN.md; the block uses the shared card. */
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.location__address {
+  font-style: normal;
+  font-size: 16px;
+  color: var(--color-fg);
+}
+
+.location__city {
+  margin-top: var(--space-0);
+}
+
+.location__route {
+  color: var(--color-fg-muted);
+}
+
+.location__hints {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: var(--color-fg-muted);
+}
+
+.location__hint-label {
+  color: var(--color-fg);
+  font-weight: 600;
+}
+
+.location__map-link {
+  align-self: flex-start;
+}

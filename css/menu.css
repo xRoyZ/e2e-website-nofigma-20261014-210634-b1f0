@@ -1,3 +1,121 @@
 /* Menu section styles.
-   Filled by the ticket "Implement the menu section with JSON data and error state".
-   Placeholder file for the skeleton ticket. */
+   Layout and typography follow DESIGN.md:
+   - categories flow in a 2-column grid from 1024px, single column below;
+   - category heading 20px heading_family with a 2px accent underline;
+   - item rows: name 16px/600, description 14px muted, price right-aligned
+     16px/600 accent with tabular numbers. */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.menu-category {
+  min-width: 0;
+}
+
+.menu-category__heading {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-fg);
+  margin: 0 0 var(--space-2);
+}
+
+.menu-category__heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: var(--space-0);
+  background-color: var(--color-accent);
+}
+
+.menu-category__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item__main {
+  min-width: 0;
+}
+
+.menu-item__name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+.menu-item__description {
+  font-size: 14px;
+  color: var(--color-fg-muted);
+  margin-top: var(--space-0);
+}
+
+.menu-item__price {
+  flex: 0 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Error state (AC-04): fills the same space the menu would occupy. */
+.menu-error {
+  background-color: var(--color-closed-subtle);
+  border: 1px solid var(--color-closed);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  color: var(--color-closed);
+}
+
+.menu-error__heading {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.menu-error__body {
+  font-size: 16px;
+  margin-top: var(--space-0);
+}
+
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item__price {
+    text-align: left;
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+      "name": "Kaffee & Espresso",
+      "items": [
+        {
+          "name": "Espresso",
+          "description": "Kräftiger Single-Origin-Espresso, frisch gemahlen",
+          "price": 2.4
+        },
+        {
+          "name": "Cappuccino",
+          "description": "Espresso mit samtig aufgeschäumter Milch",
+          "price": 3.2
+        },
+        {
+          "name": "Latte Macchiato",
+          "description": "Drei Schichten aus heißer Milch und Espresso",
+          "price": 3.8
+        },
+        {
+          "name": "Filterkaffee",
+          "description": "Handaufgebrüht, täglich wechselnde Bohnensorte",
+          "price": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Kaltgetränke",
+      "items": [
+        {
+          "name": "Hausgemachte Limonade",
+          "description": "Zitrone, Ingwer und Minze, leicht gesüßt",
+          "price": 3.6
+        },
+        {
+          "name": "Eistee Pfirsich",
+          "description": "Frisch gebrühter Schwarztee mit Pfirsichsaft",
+          "price": 3.4
+        },
+        {
+          "name": "Mineralwasser",
+          "description": "Stilles oder sprudelndes Wasser, 0,33 l",
+          "price": 2.2
+        }
+      ]
+    },
+    {
+      "name": "Frühstück",
+      "items": [
+        {
+          "name": "Frühstücksteller Morgenlicht",
+          "description": "Croissant, Brötchen, Marmelade, Käse und Rührei",
+          "price": 9.8
+        },
+        {
+          "name": "Avocado-Brot",
+          "description": "Sauerteigbrot mit Avocado, Tomate und Kresse",
+          "price": 7.5
+        },
+        {
+          "name": "Porridge mit Beeren",
+          "description": "Haferflocken, Hafermilch und frische Beeren",
+          "price": 5.9
+        }
+      ]
+    },
+    {
+      "name": "Kuchen & Gebäck",
+      "items": [
+        {
+          "name": "Apfelkuchen",
+          "description": "Hausgebacken mit Zimt und Streuseln",
+          "price": 3.9
+        },
+        {
+          "name": "Schokoladentarte",
+          "description": "Dunkle Schokolade mit Meersalz",
+          "price": 4.2
+        },
+        {
+          "name": "Zimtschnecke",
+          "description": "Warm aus dem Ofen, mit Frischkäseguss",
+          "price": 3.3
+        }
+      ]
+    }
+  ]
+}

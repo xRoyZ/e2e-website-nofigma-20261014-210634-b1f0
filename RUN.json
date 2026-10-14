@@ -1,0 +1,19 @@
+{
+  "runcontract": 1,
+  "services": [
+    {
+      "name": "web",
+      "dir": "./",
+      "stack": "web-vite",
+      "kind": "server",
+      "start": ["node", "server.mjs", "--port", "${PORT}"],
+      "port": 8000,
+      "port_env": "PORT",
+      "health": {
+        "path": "/",
+        "expect_status": [200]
+      },
+      "test": [["node", "--test"]]
+    }
+  ]
+}

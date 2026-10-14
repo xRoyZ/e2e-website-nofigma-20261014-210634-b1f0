@@ -1,0 +1,49 @@
+/* Responsive rules.
+   Mobile-first base; breakpoints follow DESIGN.md:
+   320-480px single column, 481-1023px 720px content max-width,
+   >=1024px centred and multi-column. */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-pad-y: 80px;
+  }
+
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .site-header__brand {
+    margin-bottom: 0;
+  }
+
+  .site-header__name {
+    font-size: 40px;
+  }
+
+  .section__heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav__list {
+    gap: var(--space-1);
+  }
+
+  .site-nav__link {
+    padding: 8px 10px;
+  }
+}

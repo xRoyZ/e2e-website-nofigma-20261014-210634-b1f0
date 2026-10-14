@@ -1,3 +1,85 @@
 /* Footer section styles.
-   Filled by the ticket "Implement the footer with Impressum and privacy notice".
-   Placeholder file for the skeleton ticket. */
+   Colours, spacing and radii come from DESIGN.md (tokens in styles.css).
+   The outer .site-footer background, border and padding live in styles.css;
+   this file lays out the contact columns, the legal nav and the two legal
+   blocks (Impressum, Datenschutz). */
+
+.footer__columns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__col {
+  min-width: 0;
+}
+
+.footer__brand {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-fg);
+  margin-bottom: var(--space-1);
+}
+
+.footer__line {
+  margin-top: var(--space-0);
+}
+
+.footer__street,
+.footer__city {
+  display: block;
+}
+
+.footer__link {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  text-decoration: underline;
+}
+
+.footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer__legal {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__legal-heading {
+  font-size: 20px;
+  color: var(--color-fg);
+  margin-bottom: var(--space-1);
+}
+
+.footer__paragraph + .footer__paragraph {
+  margin-top: var(--space-0);
+}
+
+@media (min-width: 1024px) {
+  .footer__columns {
+    flex-direction: row;
+    gap: var(--space-6);
+  }
+
+  .footer__col {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer__link {
+    transition: none;
+  }
+}

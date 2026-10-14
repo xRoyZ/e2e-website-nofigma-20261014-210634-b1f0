@@ -1,3 +1,117 @@
 /* Opening-hours section styles.
-   Filled by the ticket "Implement opening hours with live open/closed status".
-   Placeholder file for the skeleton ticket. */
+   Colours, spacing and radii come from the tokens in DESIGN.md. */
+
+#hours-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Status badge: open / closed (DESIGN.md "Status badge"). */
+.hours-status {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: var(--space-1);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hours-status__dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background-color: currentColor;
+}
+
+.hours-status--open {
+  background-color: var(--color-open-subtle);
+  color: var(--color-open);
+}
+
+.hours-status--closed {
+  background-color: var(--color-closed-subtle);
+  color: var(--color-closed);
+}
+
+/* One row per weekday (DESIGN.md "Opening-hours row"). */
+.hours-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hours-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 16px;
+}
+
+.hours-row:last-child {
+  border-bottom: 0;
+}
+
+.hours-row__time {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg-muted);
+}
+
+.hours-row--today {
+  padding: 8px 12px;
+  border-bottom: 0;
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-subtle);
+  font-weight: 600;
+}
+
+.hours-row--today .hours-row__day,
+.hours-row--today .hours-row__time {
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+/* Desktop: opening hours beside the contact form (DESIGN.md "Layout
+   Principles"). Both sections live directly under <main>, so the page's
+   main column becomes the shared grid; menu and location stay full width.
+   The section wrappers carry their own .container, which the grid takes
+   over here so the columns share one centred 1120px column. */
+@media (min-width: 1024px) {
+  #main {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: var(--space-5);
+    align-items: start;
+  }
+
+  #main .container {
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  #menu,
+  #location {
+    grid-column: 1 / -1;
+  }
+
+  #opening-hours {
+    grid-column: 1;
+  }
+
+  #contact {
+    grid-column: 2;
+  }
+}

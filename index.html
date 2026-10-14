@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Café Morgenlicht</title>
+    <meta
+      name="description"
+      content="Café Morgenlicht — Kaffee, Kuchen und Speisekarte, Öffnungszeiten, Anfahrt und Kontakt."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/hours.css" />
+    <link rel="stylesheet" href="css/location.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <div class="site-header__brand">
+          <p class="site-header__name" id="site-name"></p>
+          <p class="site-header__tagline" id="site-tagline"></p>
+        </div>
+        <nav class="site-nav" aria-label="Seitennavigation">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#menu">Speisekarte</a></li>
+            <li><a class="site-nav__link" href="#opening-hours">Öffnungszeiten</a></li>
+            <li><a class="site-nav__link" href="#location">Anfahrt</a></li>
+            <li><a class="site-nav__link" href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="menu" class="section" aria-labelledby="menu-heading">
+        <div class="container">
+          <h2 id="menu-heading" class="section__heading">Speisekarte</h2>
+          <div id="menu-content" class="section__content"></div>
+        </div>
+      </section>
+
+      <section id="opening-hours" class="section" aria-labelledby="hours-heading">
+        <div class="container">
+          <h2 id="hours-heading" class="section__heading">Öffnungszeiten</h2>
+          <div id="hours-content" class="section__content"></div>
+        </div>
+      </section>
+
+      <section id="location" class="section" aria-labelledby="location-heading">
+        <div class="container">
+          <h2 id="location-heading" class="section__heading">Anfahrt</h2>
+          <div id="location-content" class="section__content"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="container">
+          <h2 id="contact-heading" class="section__heading">Kontakt</h2>
+          <div id="contact-content" class="section__content"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div id="footer-content" class="site-footer__content"></div>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
